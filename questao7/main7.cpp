@@ -15,6 +15,6 @@ int main(){
     sort(valor.begin(), valor.end()); // ordena o vetor
     criarObjetos(vetor, valor);
     show(vetor);
-    system("pause");
+    
     return 0;
 } 
