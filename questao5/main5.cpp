@@ -10,7 +10,7 @@ int main(){
     vector <int> vetor;
     int valor;
 
-    arquivo.open("arquivo.txt");
+    arquivo.open("../questao2/arquivo.txt");
 
     while(arquivo >> valor){
         vetor.push_back(valor);
