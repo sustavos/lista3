@@ -22,13 +22,15 @@ void arquivo(string nome, vector <int>& a){
 }
 
 void criarObjetos(vector <DadosSensor>& vetor, vector <int>& v){
-    for(int i = 0; i < v.size();i++){
+    for(int i = 0; i < 1000;i++){
         int fTemp, vTemp;
 
-        vTemp = v[i];
-        fTemp = count(v.begin(), v.end(), v[i]);
+        vTemp = i;
+        fTemp = count(v.begin(), v.end(), i);
 
-        vetor.push_back(DadosSensor(vTemp,fTemp));
+        if(fTemp != 0){
+            vetor.push_back(DadosSensor(vTemp,fTemp));
+        }
     }
 }
 
