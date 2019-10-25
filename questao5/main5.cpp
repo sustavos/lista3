@@ -10,7 +10,7 @@ int main(){
     vector <int> vetor;
     int valor;
 
-    arquivo.open("../questao2/arquivo.txt");
+    arquivo.open("arquivo.txt");
 
     while(arquivo >> valor){
         vetor.push_back(valor);
@@ -18,8 +18,12 @@ int main(){
     
     sort(vetor.begin(), vetor.end());
 
-    for(int i = 0; i < vetor.size(); i++){
-        cout << "O número " << vetor[i] << " aparece " << count(vetor.begin(), vetor.end(), vetor[i]) << " vez(es)." << endl;
+    for(int i = 0; i < 1000; i++){
+        int freq = count(vetor.begin(), vetor.end(), i);
+
+        if(freq != 0){
+            cout << "O número " << i << " aparece " << freq << " vez(es)." << endl;
+        }
     }
 
     arquivo.close();
